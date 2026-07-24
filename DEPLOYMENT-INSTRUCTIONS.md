@@ -1,17 +1,20 @@
-# MeshUp Website Swipe Preview Update
+# MeshUp UI Fixes Deployment
 
-## What changed
-- Replaced the single composite app-preview image with seven individual phone-screen images.
-- Added previous and next buttons, progress dots, keyboard navigation, and touch/mouse dragging.
-- Added a smooth blur, scale, clip, and 3D morph-style transition.
-- Added live HTML titles and descriptions for each application screen.
-- Added reduced-motion accessibility support.
-
-## Use
-The standalone HTML file is self-contained and can be opened directly in a browser. No build step is required.
+## Improvements
+- Corrected secondary-button text contrast.
+- Rebuilt the Clear Expectations section as styled, accessible card buttons.
+- Rebuilt the footer controls as real clickable buttons and links.
+- Added a working policy dialog with keyboard focus restoration and Escape-key closing.
+- Replaced the static app-preview collage with seven individual optimized WebP screens.
+- Rebuilt carousel navigation for arrows, dots, keyboard, swipe, and mouse drag.
+- Added morph-style blur, scale, clipping, and 3D transitions.
 
 ## Deploy
-Rename `meshup-website-swipe-preview.html` to `index.html` and upload it to the existing static host, replacing the previous website file. Clear the browser or CDN cache if the previous preview continues to appear.
+Upload `index.html` together with the complete `assets` directory. The relative path must remain `assets/<screen>.webp`. Clear the hosting/CDN cache after replacing the old version.
 
-## Separate assets
-The ZIP also includes the seven WebP images under `assets/`. The standalone HTML already embeds the same images, so those files are optional unless the site is later refactored to use external assets.
+## Test
+1. Open the page through an HTTP/HTTPS server, not only a file preview.
+2. Test all eight Clear Expectations cards.
+3. Test all footer policy buttons.
+4. Test the carousel arrows, seven dots, keyboard arrows, swipe, and mouse drag.
+5. Test desktop and mobile widths and the reduced-motion setting.
